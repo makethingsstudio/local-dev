@@ -15,7 +15,7 @@ web:
   build: config/docker/images/apache-php
   hostname: example
   volumes:
-    - /example-project/public/www:/var/www/html
+    - /vagrant/example-project/public/www:/var/www/html
   volumes_from:
     - data
   links:
