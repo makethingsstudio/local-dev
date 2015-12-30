@@ -1,0 +1,31 @@
+# Used for storing data within docker environment
+# Docker has a hard time with storing files from a
+# guest to host computer, and Vagrant also makes things
+# more difficult.
+#
+# I store my data in Docker, then use a script to transfer it in
+# and out.
+data:
+  image: phusion/baseimage
+  volumes:
+    - /var/www/html/content/uploads
+    - /var/lib/mysql
+
+web:
+  build: config/docker/images/apache-php
+  hostname: example
+  volumes:
+    - /example-project/public/www:/var/www/html
+  volumes_from:
+    - data
+  links:
+    - mysql
+  environment:
+    - VIRTUAL_HOST=example.dev
+
+mysql:
+  image: mysql
+  ports:
+    - 3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
