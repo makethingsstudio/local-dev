@@ -3,8 +3,9 @@ Local development example using Vagrant, Docker, and DNSMasq on a Mac
 
 ## Table of Contents
 
-1. Quickstart
-2. Requirements
+1. [Quickstart](#quickstart)
+2. [Requirements](#ballot_box_with_check-requirements)
+3. [Setup Steps](#information_source-setup-steps)
 
 ## Quickstart
 
