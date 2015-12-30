@@ -1,0 +1,3 @@
+[submodule "example-project/public/www/wp"]
+	path = example-project/public/www/wp
+	url = git@github.com:WordPress/WordPress.git
