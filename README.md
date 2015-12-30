@@ -16,6 +16,7 @@ This assumes you have all requirements installed.
 ```sh
 git clone git@github.com:makethingsstudio/local-dev.git
 cd local-dev
+git submodule update --init --recursive
 ```
 
 ### :two: Start Vagrant
