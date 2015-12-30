@@ -51,3 +51,41 @@ Visit [http://example.dev](http://example.dev).
  - [Mac Getting Started Guide](https://docs.docker.com/mac/)
  - [Mac Download](https://www.docker.com/toolbox)
 - [DNSMasq](http://www.thekelleys.org.uk/dnsmasq/doc.html), installed via homebrew `brew install dnsmasq`
+
+- - -
+
+## :information_source: Setup Steps
+
+### :one: Install Homebrew
+
+Homebrew makes installing command line tools easier. If you don’t have it installed already, installing is easy.
+
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### :two: Install Virtualization Tool
+
+For the purpose of this demo, we’ll use VirtualBox. Personally, I’m using VMWare, since I also use it for [local development testing of Internet Explorer.](https://modern.ie)
+
+### :three: Install Vagrant and configure Vagrantfile.
+
+#### WIP
+
+#### `Vagrantfile` location
+
+I keep the Vagrantfile in my `~/Documents` folder, so that all of my projects (also stored in `~/Documents` can make use of it. [Vagrant searches your current folder, or all parent folders until it finds a Vagrantfile](https://docs.vagrantup.com/v2/vagrantfile/index.html).)
+
+### :four: Install Docker and setup `docker-compose`
+
+#### WIP
+
+#### Using `docker-compose` multi-container, multi-project development
+
+[`docker-compose`](https://www.docker.com/docker-compose) allows you to tie multiple containers together, and configure important environmental variables.
+
+The nginx-proxy container that we load in our Vagrantfile looks for the `VIRTUAL_HOST` environmental variable. It uses that with its nginx proxy to route our local development urls (like `example.dev`) to the correct container.
+
+### :five: Configure DNSMasq to work with Docker
+
+[See this article by Mijndert Stuij.](http://mijndertstuij.nl/using-docker-run-wordpress-behind-nginx-reverse-proxy-development/)
