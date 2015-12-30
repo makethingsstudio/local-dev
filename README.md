@@ -88,4 +88,22 @@ The nginx-proxy container that we load in our Vagrantfile looks for the `VIRTUAL
 
 ### :five: Configure DNSMasq to work with Docker
 
-[See this article by Mijndert Stuij.](http://mijndertstuij.nl/using-docker-run-wordpress-behind-nginx-reverse-proxy-development/)
+See these two articles, particularly the first one.
+
+- [Using DNSMasq for Local Development on OSX](https://passingcuriosity.com/2013/dnsmasq-dev-osx/)
+- [Running DNSMasq on OS X and routing to virtual machines](http://jakegoulding.com/blog/2014/04/26/running-dnsmasq-on-os-x-and-routing-to-virtual-machines/)
+
+Configuration to add to your `/usr/local/etc/dnsmasq.conf`
+
+```dnsmasq
+local=/dev/
+expand-hosts
+domain=dev
+address=/.dev/192.168.30.100
+```
+
+Configuration to add to your `/etc/resolver/dev`
+
+```
+nameserver 127.0.0.1
+```
