@@ -1,0 +1,50 @@
+{
+    "version": "0.1.0",
+    "private": true,
+    "engines": {
+        "node": ">=4"
+    },
+    "devDependencies": {
+        "babel-core": "^6.4.0",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-register": "^6.5.2",
+        "browser-sync": "^2.2.1",
+        "del": "^1.1.1",
+        "gulp": "^3.9.1",
+        "gulp-cache": "^0.4.2",
+        "gulp-cssnano": "^2.0.0",
+        "gulp-eslint": "^2.0.0",
+        "gulp-htmlmin": "^1.3.0",
+        "gulp-if": "^2.0.0",
+        "gulp-imagemin": "^2.2.1",
+        "gulp-load-plugins": "^1.2.2",
+        "gulp-postcss": "^6.1.0",
+        "gulp-size": "^1.2.1",
+        "gulp-sourcemaps": "^1.5.0",
+        "gulp-uglify": "^1.1.0",
+        "gulp-useref": "^3.0.0",
+        "postcss-cssnext": "^2.5.2",
+        "postcss-cssnext": "^2.5.2",
+        "postcss-easy-import": "^1.0.1",
+        "postcss-reporter": "^1.3.3",
+        "postcss-sorting": "^1.2.3",
+        "postcss-url": "^5.1.1",
+        "run-sequence": "^1.1.5",
+        "stylelint": "^6.0.3",
+        "stylelint-config-standard": "^6.0.0",
+        "gulp-debug": "^2.1.2",
+        "gulp-rev": "^7.0.0",
+        "gulp-rev-replace": "^0.4.3"
+    },
+    "eslintConfig": {
+        "rules": {
+            "quotes": [
+                2,
+                "single"
+            ]
+        }
+    },
+    "scripts": {
+        "run": "gulp"
+    }
+}

@@ -1,0 +1,29 @@
+data:
+  image: alpine:3.3
+  volumes:
+    - /var/www/html/content/uploads
+    - /var/lib/mysql
+
+env:
+  build: config/docker/images/environment
+  volumes:
+    - /vagrant/local-dev/source:/usr/src/app/source
+    - /vagrant/local-dev/public:/usr/src/app/public
+    - /usr/src/app/.tmp
+  links:
+    - web
+
+mysql:
+  image: mysql:5.5
+  ports:
+    - 3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+
+web:
+  build: config/docker/images/web
+  volumes_from:
+    - env
+    - data
+  links:
+    - mysql
